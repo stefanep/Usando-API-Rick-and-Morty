@@ -7,7 +7,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [info, setinfo] = useState({});
 
-  const initialurl = "https://rickandmortyapi.com/api/character";
+  // const initialurl = "https://rickandmortyapi.com/api/character";/
 
   const fetchCharacters = (url) => {
     fetch(url)
@@ -18,6 +18,7 @@ function App() {
       })
       .catch((error) => console.log(error));
   };
+
   const onPrevious = () => {
     fetchCharacters(info.prev);
   }
